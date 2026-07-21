@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>欢迎回家 · Enjoy Your Life</title>
+<style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: #FAF7F3; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px 40px 18px; }
+  body {
+    font-family: 'Lato', 'Noto Sans CJK SC', sans-serif;
+    color: #3A3835;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header { text-align: center; padding: 3mm 0 5mm 0; margin-bottom: 5mm; }
+  .header .kicker {
+    font-size: 7.5pt; letter-spacing: 2px; color: #C4707F; font-weight: 700; margin-bottom: 2.5mm;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif;
+    font-size: 32pt; font-weight: 600; color: #46523F;
+    line-height: 1.05; margin-bottom: 2.5mm;
+  }
+  .header .sub { font-size: 9pt; color: #7A736A; }
+  .header .rule {
+    width: 34mm; height: 1.2pt; background: #A78966;
+    margin: 4mm auto 0 auto;
+  }
+
+  /* ---------- ESSENTIALS ---------- */
+  .essentials {
+    background: #6B7A66; color: #fff;
+    border-radius: 12px; padding: 5.5mm 7mm 5mm 7mm; margin-bottom: 7mm;
+  }
+  .essentials h2 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-size: 15pt; font-weight: 600;
+    color: #F2BFC9; margin-bottom: 3.5mm;
+  }
+  .ess-grid { display: flex; }
+  .ess-col { flex: 1; padding-right: 4mm; }
+  .ess-col:last-child { padding-right: 0; }
+  .ess-item { margin-bottom: 3mm; }
+  .ess-item:last-child { margin-bottom: 0; }
+  .ess-label {
+    font-size: 6.8pt; letter-spacing: 0.5px;
+    color: #F2BFC9; font-weight: 600; margin-bottom: 0.5mm;
+  }
+  .ess-value { font-size: 11.5pt; font-weight: 600; color: #FFFFFF; }
+
+  /* ---------- SECTIONS ---------- */
+  .section {
+    display: flex; align-items: baseline;
+    margin: 6mm 0 4mm 0;
+  }
+  .section .num {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-size: 16pt; font-weight: 700;
+    color: #C4707F; margin-right: 3mm;
+  }
+  .section h2 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-size: 17pt; font-weight: 600;
+    color: #46523F;
+  }
+  .section .fill {
+    flex: 1; border-bottom: 1pt solid #E3D9CC; margin-left: 4mm;
+    position: relative; top: -3pt;
+  }
+
+  /* ---------- CARDS ---------- */
+  .grid { display: flex; flex-wrap: wrap; margin: 0 -2mm; }
+  .card { width: 50%; padding: 0 2mm; margin-bottom: 4mm; }
+  .card-full { width: 100%; padding: 0 2mm; margin-bottom: 4mm; }
+  .card-inner {
+    background: #FFFFFF; border: 1pt solid #EBE2D6;
+    border-radius: 10px; padding: 4mm 4.5mm; height: 100%;
+  }
+  .card-head { display: flex; align-items: center; margin-bottom: 2.2mm; }
+  .icon-dot {
+    width: 21pt; height: 21pt; border-radius: 50%;
+    background: #F6D3DA;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 3mm;
+  }
+  .icon-dot svg { width: 12pt; height: 12pt; stroke: #46523F; }
+  .card-head h3 {
+    font-size: 8.8pt; font-weight: 700; letter-spacing: 1.2px;
+    text-transform: uppercase; color: #46523F;
+  }
+  .card p { color: #55504A; margin-bottom: 1.2mm; }
+  .card p:last-child { margin-bottom: 0; }
+  strong { color: #46523F; font-weight: 700; }
+  .note {
+    font-size: 8.2pt; color: #A25E6E;
+    background: #FBEDF0; border-left: 2pt solid #DE96A4;
+    border-radius: 0 5px 5px 0;
+    padding: 1.6mm 2.8mm; margin-top: 2mm;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact {
+    background: #6B7A66; border-radius: 12px;
+    padding: 5mm 7mm; text-align: center; margin-top: 4mm; color: #fff;
+  }
+  .contact h3 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-size: 15pt; font-weight: 600;
+    color: #F2BFC9; margin-bottom: 1.5mm;
+  }
+  .contact p { color: #E9EDE5; font-size: 9pt; }
+  .contact .phone { font-size: 13pt; font-weight: 700; color: #FFFFFF; margin-top: 1mm; letter-spacing: 1px; }
+  .signature { text-align: center; margin-top: 7mm; }
+  .signature .line1 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-style: italic;
+    font-size: 15pt; color: #46523F;
+  }
+  .signature .line2 {
+    font-family: 'Cormorant Garamond', 'Noto Serif CJK SC', serif; font-size: 13pt; color: #C4707F; margin-top: 1mm;
+  }
+  .pagebreak { height: 10mm; }
+  @media (max-width: 640px) {
+    .card { width: 100%; }
+    .ess-grid { display: block; }
+    .ess-col { padding-right: 0; }
+    .header h1 { font-size: 26pt; }
+  }
+  .footer-web {
+    text-align: center; margin-top: 14mm;
+    font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase; color: #B5A896;
+  }
+  .lang { text-align: right; margin-bottom: 4mm; }
+  .lang a {
+    font-family: 'Lato', 'Noto Sans CJK SC', sans-serif; font-size: 8.5pt; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #C4707F; text-decoration: none;
+    border: 1pt solid #F6D3DA; border-radius: 20px; padding: 4px 12px;
+    margin-left: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="lang"><a href="./">🇬🇧 EN</a><a href="fr.html">🇫🇷 FR</a></div>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="header">
+  <div class="kicker">尼斯之旅</div>
+  <h1>欢迎回家</h1>
+  <div class="sub">让您宾至如归的一切信息，欢迎入住 <strong>Enjoy Your Life</strong>！</div>
+  <div class="rule"></div>
+</div>
+
+<div class="essentials">
+  <h2>重要信息</h2>
+  <div class="ess-grid">
+    <div class="ess-col">
+      <div class="ess-item">
+        <div class="ess-label">WiFi 名称</div>
+        <div class="ess-value">Enjoy Your Life</div>
+      </div>
+      <div class="ess-item">
+        <div class="ess-label">WiFi 密码</div>
+        <div class="ess-value">0611834292</div>
+      </div>
+    </div>
+    <div class="ess-col">
+      <div class="ess-item">
+        <div class="ess-label">大门密码</div>
+        <div class="ess-value">3578A</div>
+      </div>
+      <div class="ess-item">
+        <div class="ess-label">房门密码</div>
+        <div class="ess-value">9532A</div>
+      </div>
+    </div>
+    <div class="ess-col">
+      <div class="ess-item">
+        <div class="ess-label">门铃姓名</div>
+        <div class="ess-value">ROCHER</div>
+      </div>
+      <div class="ess-item">
+        <div class="ess-label">免费停车</div>
+        <div class="ess-value">小区内 及 Caravadossi 街</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="num">01</span>
+  <h2>公寓内部须知</h2>
+  <span class="fill"></span>
+</div>
+
+<div class="grid">
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.6 18.6L5.4 5.4M12 3c5 0 9 4 9 9 0 1.8-.5 3.4-1.4 4.8M8.5 20.2c1.1.5 2.3.8 3.5.8 5 0 9-4 9-9"/><path d="M3.4 7.2C3.1 8.1 3 9 3 12c0 5 4 9 9 9"/></svg></span>
+      <h3>禁止吸烟</h3>
+    </div>
+    <p>公寓内禁止吸烟，欢迎您在 <strong>露台上</strong> 吸烟。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12c0-2 1-4 2-5m14 5c0-2-1-4-2-5M7 17c-1.5 0-2.5-1-2.5-2.5M17 17c1.5 0 2.5-1 2.5-2.5"/><circle cx="9" cy="19" r="1.2"/><circle cx="15" cy="19" r="1.2"/></svg></span>
+      <h3>请脱鞋</h3>
+    </div>
+    <p>这里遵循日式生活方式 😊<br>请在公寓内脱鞋。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M6 5l2 2M18 5l-2 2M12 8a4 4 0 0 0-4 4v0a4 4 0 0 0 8 0v0a4 4 0 0 0-4-4zM4 12h2M18 12h2M6 19l2-2M18 19l-2-2M12 22v-3"/></svg></span>
+      <h3>空调</h3>
+    </div>
+    <p>遥控器分别放在 <strong>卧室</strong> 和 <strong>客厅</strong>。</p>
+    <p class="note">开空调时请关好窗户。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3l16 0M6 3v13a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V3M9 21h6"/></svg></span>
+      <h3>垃圾分类</h3>
+    </div>
+    <p>垃圾桶和垃圾袋：<strong>在厨房水槽下方</strong>。</p>
+    <p>垃圾房：<strong>位于地下一层（-1）</strong>。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v2M10 2v2M14 2v2"/></svg></span>
+      <h3>Nespresso 咖啡</h3>
+    </div>
+    <p>请随意享用！浓、中、淡皆可，按您喜好选择。</p>
+    <p class="note">需要补充胶囊？Masséna 广场有 Nespresso 专卖店。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 2 2 3 2 4.5A2 2 0 0 1 12 8.5 2 2 0 0 1 10 6.5C10 5 11 4 12 2zM9 11h6v9a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-9zM7 21h10"/></svg></span>
+      <h3>温馨蜡烛</h3>
+    </div>
+    <p>蜡烛放在客厅的 <strong>绿色盒子</strong> 里，欢迎取用，营造温馨氛围 <span style="color:#C4707F;">😊</span></p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="3"/><circle cx="16" cy="12" r="2.8"/><path d="M5 10.5h4M5 13.5h4M7 17v3M17 17v3"/></svg></span>
+      <h3>电影之夜</h3>
+    </div>
+    <p>卧室配有 <strong>投影仪</strong>，欢迎使用，享受一个温馨的电影之夜！ <span style="color:#C4707F;">🎬</span></p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.5 4.5 6 7.8 6 11a6 6 0 0 1-12 0c0-3.2 2.5-6.5 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></span>
+      <h3>自来水</h3>
+    </div>
+    <p>自来水 <strong>完全可以直接饮用</strong>，请随意取用！💧</p>
+  </div></div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="pagebreak"></div>
+
+<div class="section" style="margin-top:0;">
+  <span class="num">02</span>
+  <h2>尼斯市内出行</h2>
+  <span class="fill"></span>
+</div>
+
+<div class="grid">
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M6 19h9M15 19l3-11h3M14 5h2l2 3"/></svg></span>
+      <h3>电动滑板车</h3>
+    </div>
+    <p>欢迎使用滑板车快速前往市区（<strong>限一人使用</strong>）。</p>
+    <p>防盗锁钥匙在公寓钥匙串上：<strong>在市区请务必锁好</strong>。</p>
+    <p><strong>必须佩戴头盔</strong>：入口处有一顶粉色可调节头盔。</p>
+    <p class="note">⚠ 骑行时请注意安全，存在一定危险！</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M9 18l-2 3M15 18l2 3M9 7h6"/></svg></span>
+      <h3>电车与公交</h3>
+    </div>
+    <p>最近的电车站：<strong>「Libération」站</strong>（步行约 12 分钟）。</p>
+    <p>公寓为您准备了一张交通卡，可通过 <strong>「Lignes d'Azur Mobile」</strong> 应用程序或车站自动售票机充值。</p>
+    <p class="note">两人同行？每次乘车请刷卡两次。</p>
+  </div></div>
+</div>
+
+<div class="section">
+  <span class="num">03</span>
+  <h2>实用小贴士</h2>
+  <span class="fill"></span>
+</div>
+
+<div class="grid">
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="4"/><path d="M12 14v7M8 4l2 3M16 4l-2 3M5 10h3M16 10h3M9 18l3-2 3 2"/></svg></span>
+      <h3>夏季蚊虫</h3>
+    </div>
+    <p>夏季偶尔会有蚊虫出没，<strong>电蚊拍</strong>是您的最佳伙伴！</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11M12 11c0-4 3-7 7-7 0 4-3 7-7 7zM12 14c0-3-2.5-5-5.5-5 0 3 2.5 5 5.5 5zM8 21h8"/></svg></span>
+      <h3>露台植物</h3>
+    </div>
+    <p>如果发现土壤干燥，欢迎给露台上的植物浇一点水，谢谢 ！ <span style="color:#C4707F;">🌿</span></p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1.5 12a1.5 1.5 0 0 1-1.5 1.7H6A1.5 1.5 0 0 1 4.5 20L6 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+      <h3>请看管好随身物品</h3>
+    </div>
+    <p>无论在街上、电车上还是海滩边：请随时留意您的包，切勿离开视线。</p>
+  </div></div>
+
+  <div class="card"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c1.5 1.2 3.5 1.2 5 0s3.5-1.2 5 0 3.5 1.2 5 0 2-1 3 0M3 20c1.5 1.2 3.5 1.2 5 0s3.5-1.2 5 0 3.5 1.2 5 0 2-1 3 0M12 3a5 5 0 0 1 5 5v3H7V8a5 5 0 0 1 5-5z"/></svg></span>
+      <h3>沙滩用品</h3>
+    </div>
+    <p>公寓为您准备了 <strong>一个沙滩包和两条浴巾</strong>，退房时留在公寓内即可。</p>
+  </div></div>
+
+  <div class="card-full"><div class="card-inner">
+    <div class="card-head">
+      <span class="icon-dot"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#46523F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></span>
+      <h3>退房</h3>
+    </div>
+    <p>无需提前准备，退房前我会通过 <strong>Airbnb</strong> 向您发送简单的退房流程。</p>
+  </div></div>
+</div>
+
+<div class="contact">
+  <h3>入住期间有任何需要吗？</h3>
+  <p>欢迎随时通过以下方式联系我： <strong style="color:#fff;">Airbnb</strong> or <strong style="color:#fff;">WhatsApp</strong></p>
+  <p class="phone">+33 6 03 43 90 05</p>
+</div>
+
+<div class="signature">
+  <div class="line1">祝您在尼斯度过愉快的时光……Enjoy Your Life！</div>
+  <div class="line2">Stéphanie</div>
+</div>
+
+<div class="footer-web">Enjoy Your Life · Nice, Côte d'Azur</div>
+</div>
+</body>
+</html>
